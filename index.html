@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <!-- <link rel="stylesheet" href="dist/theme/black.css" /> -->
+    <link rel="stylesheet" href="dist/theme/dracula.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <!-- <link rel="stylesheet" href="dist/custom.css" /> -->
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Demo Presentation</h1>
+        </section>
+        <section>
+          <h2>I'm a Sub Heading</h2>
+          <p>Here is some content.</p>
+          <p>and more content!</p>
+        </section>
+        <section>
+          <p>This will remain visible for all vertical slides</p>
+          <section>Here is some vertical content</section>
+          <section>and some more</section>
+          <section>more stuff...</section>
+        </section>
+        <section>
+          <h2>Self hosted image</h2>
+          <img src="images/dinosaur-1.jpg" alt="reading side" />
+        </section>
+        <section
+          data-background="https://media.giphy.com/media/3oKIPmDhXaieiJE3Sg/giphy.gif"
+        >
+          <h2>Full Screen Background</h2>
+        </section>
+        <section>
+          <h2>fragments in DOM order</h2>
+          <ul>
+            <li class="fragment">This item will be displayed first</li>
+            <li class="fragment">This item will be second</li>
+            <li class="fragment">And this will be last</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Fragments in Custom Order</h2>
+          <ul>
+            <li class="fragment" data-fragment-index="3">Third</li>
+            <li class="fragment" data-fragment-index="2">Second</li>
+            <li class="fragment" data-fragment-index="1">First</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Another Fragment Example</h2>
+          <p class="fragment fade-left">I will fade in from the left</p>
+        </section>
+        <section data-state="my-style">
+          <p>I'm special!</p>
+        </section>
+        <section>
+          <p>This slide has some speaker notes</p>
+          <aside class="notes">
+            These are the speaker notes. They are only visible in a separate
+            window after pressing the s key.
+          </aside>
+        </section>
+
+        <!-- <section>Slide 1</section>
+        <section>
+          <section>Slide 2 vertical 1</section>
+          <section>Slide 2 vertical 2</section>
+        </section>
+        <section>Slide 3</section> -->
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
